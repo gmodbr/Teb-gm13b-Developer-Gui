@@ -89,7 +89,12 @@ end
 hook.Add("VehicleMove", "cgm13_vehicle_control", function(ply, vehicle)
     if CGM13.Vehicle:IsBroken(vehicle) then
         vehicle:StartEngine(false)
-        BreakSCar(vehicle)
-        BreakSimphys(vehicle)
+
+        if vehicle.IsSimfphyscar then
+            BreakSimphys(vehicle)
+        end
+        if vehicle.IsScar then
+            BreakSCar(vehicle)
+        end
     end
 end)
