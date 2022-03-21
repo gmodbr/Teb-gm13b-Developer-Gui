@@ -12,6 +12,11 @@ local function BreakSCar(vehicle)
         if vehicle.StartCar then 
             vehicle.StartCar = function() return end
         end
+
+        if vehicle.TurnLeft or vehicle.TurnRight then
+            vehicle.TurnLeft = function() return end
+            vehicle.TurnRight = function() return end
+        end
     end
 
 end
@@ -63,7 +68,11 @@ function CGM13.Vehicle:Break(vehicle, value)
     BreakSimphys(vehicle)
 
     if vehicle.Think then
-        vehicle.Think = function() return end
+        if not vehicle.IsScar then
+            if not vehicle.IsSimfphyscar then
+                vehicle.Think = function() return end
+            end
+        end
     end
 
     for _,sounds in pairs( vehicle:GetVar("SoundTable") ) do
