@@ -5,18 +5,19 @@
 -- https://steamcommunity.com/sharedfiles/filedetails/?id=104483020
 local function BreakSCar(vehicle)
     if not vehicle or not IsValid(vehicle) or not vehicle:IsVehicle() then return end
+    if not vehicle.IsScar then return end
 
-    if vehicle.IsScar and vehicle.TurnOffCar then
+    if vehicle.TurnOffCar then
         vehicle:TurnOffCar()
+    end
 
-        if vehicle.StartCar then 
-            vehicle.StartCar = function() return end
-        end
+    if vehicle.StartCar then 
+        vehicle.StartCar = function() return end
+    end
 
-        if vehicle.TurnLeft or vehicle.TurnRight then
-            vehicle.TurnLeft = function() return end
-            vehicle.TurnRight = function() return end
-        end
+    if vehicle.TurnLeft or vehicle.TurnRight then
+        vehicle.TurnLeft = function() return end
+        vehicle.TurnRight = function() return end
     end
 
 end
@@ -25,13 +26,19 @@ end
 -- https://steamcommunity.com/workshop/filedetails/?id=771487490
 local function BreakSimphys(vehicle)
     if not vehicle or not IsValid(vehicle) or not vehicle:IsVehicle() then return end
+    if not vehicle.IsSimfphyscar then return end
 
-    if vehicle.IsSimfphyscar and vehicle.StopEngine then
+    if vehicle.StopEngine then
         vehicle:StopEngine()
+    end
 
-        if vehicle.StartEngine then 
-            vehicle.StartEngine = function() return end 
-        end
+    if vehicle.StartEngine then 
+        vehicle.StartEngine = function() return end 
+    end
+
+    if vehicle.SetActive then
+        vehicle:SetActive(false)
+        vehicle.SetActive = function() return end
     end
 
 end
@@ -99,11 +106,7 @@ hook.Add("VehicleMove", "cgm13_vehicle_control", function(ply, vehicle)
     if CGM13.Vehicle:IsBroken(vehicle) then
         vehicle:StartEngine(false)
 
-        if vehicle.IsSimfphyscar then
-            BreakSimphys(vehicle)
-        end
-        if vehicle.IsScar then
-            BreakSCar(vehicle)
-        end
+        BreakSimphys(vehicle)
+        BreakSCar(vehicle)
     end
 end)
