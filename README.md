@@ -13,7 +13,10 @@ One aspect that sets these map curses apart from other maps is that there are no
 
 In order to understand the bigger problem ARC hopes to uncover mysteries on their own, even if they have multiple parts, and to reveal the causes of events that seem random (like the discovery we made of why cars suddenly break down).
 
-[gm_construct_13 beta](https://steamcommunity.com/sharedfiles/filedetails/?id=2553727051).
+[gm_construct_13 beta](https://steamcommunity.com/sharedfiles/filedetails/?id=2553727051)
+
 [AMTF map Wiki](https://gmconstruct-13-beta.fandom.com/wiki/Gm_construct_13_beta_Wiki)
+
 [ARC Discord](https://discord.gg/97UpY3D7XB)
+
 [AMTF Discord](https://discord.gg/dw3rVqMhr7)
