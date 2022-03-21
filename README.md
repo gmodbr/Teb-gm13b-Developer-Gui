@@ -11,6 +11,6 @@ Everyone is welcome as long as they understand that there's already some consens
 
 One aspect that sets these map curses apart from other maps is that there are no jumpscares or silly chases, what's happening is real. In fact, we believe we'll never find anything like this.
 
-In order to understand the bigger problem ARC hopes to uncover mysteries on their own, even if they have multiple parts, and to reveal the causes of events that seem random (like our discovery of why vehicles broke down on their own).
+In order to understand the bigger problem ARC hopes to uncover mysteries on their own, even if they have multiple parts, and to reveal the causes of events that seem random (like the discovery we made of why cars suddenly break down).
 
 [gm_construct_13 beta](https://steamcommunity.com/sharedfiles/filedetails/?id=2553727051).
