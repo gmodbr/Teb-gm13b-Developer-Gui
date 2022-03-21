@@ -1,11 +1,42 @@
 
 -- Break vehicles (By Zaurzo)
 
+-- SCars
+-- https://steamcommunity.com/sharedfiles/filedetails/?id=104483020
+local function BreakSCar(vehicle)
+    if not vehicle or not IsValid(vehicle) or not vehicle:IsVehicle() then return end
+
+    if vehicle.IsScar and vehicle.TurnOffCar then
+        vehicle:TurnOffCar()
+
+        if vehicle.StartCar then 
+            vehicle.StartCar = function() return end
+        end
+    end
+
+end
+
+-- Simphys
+-- https://steamcommunity.com/workshop/filedetails/?id=771487490
+local function BreakSimphys(vehicle)
+    if not vehicle or not IsValid(vehicle) or not vehicle:IsVehicle() then return end
+
+    if vehicle.IsSimfphyscar and vehicle.StopEngine then
+        vehicle:StopEngine()
+
+        if vehicle.StartEngine then 
+            vehicle.StartEngine = function() return end 
+        end
+    end
+
+end
+
 hook.Add("OnEntityCreated", "cgm13_SetSoundTable", function(e)
     if not e:IsVehicle() then return end
     local StopSoundTable = {}
     e:SetVar("SoundTable", StopSoundTable)
 end)
+-- Add the sound list table to stop later
 
 hook.Add("EntityEmitSound", "cgm13_GetSCarSoundList", function(d)
     if not d.Entity or not IsValid(d.Entity) then return end
@@ -14,9 +45,9 @@ hook.Add("EntityEmitSound", "cgm13_GetSCarSoundList", function(d)
     local SoundList = e:GetVar("SoundTable")
     table.insert(SoundList, d.SoundName)
     e:SetVar("SoundTable", SoundList)
-    -- Some vehicle engine sounds don't stop upon engine break
-    -- So we add it to a table and stop the sound when necessary
 end)
+-- Some vehicle engine sounds don't stop upon engine break
+-- So we add it to a table and stop the sound when necessary
 
 function CGM13.Vehicle:Break(vehicle, value)
 
@@ -27,6 +58,9 @@ function CGM13.Vehicle:Break(vehicle, value)
         vehicle:StartEngine(false)
         vehicle:SetSequence("idle")
     end
+
+    BreakSCar(vehicle)
+    BreakSimphys(vehicle)
 
     if vehicle.Think then
         vehicle.Think = function() return end
@@ -55,6 +89,7 @@ end
 hook.Add("VehicleMove", "cgm13_vehicle_control", function(ply, vehicle)
     if CGM13.Vehicle:IsBroken(vehicle) then
         vehicle:StartEngine(false)
-        vehicle.Think = function() return end
+        BreakSCar(vehicle)
+        BreakSimphys(vehicle)
     end
 end)
