@@ -2,7 +2,7 @@ local eventName = "breakVehicles"
 
 local function CreateEvent()
     local function StartTouch(ent, chance)
-		if not ent:IsVehicle() then return end
+		if not ent:IsVehicle() or CGM13.Vehicle:IsBroken(ent) then return end
 
 		if math.random(1, 100) <= chance then
             timer.Simple(math.random(2, 6), function()
@@ -27,7 +27,7 @@ local function CreateEvent()
 	breakVehiclesGarage:Setup(eventName, "breakVehiclesGarage", Vector(-2809.4, -1064.7, 207.9), Vector(-1056.9, -1919, -143.9))
 
     local breakVehiclesDarkroom = ents.Create("gm13_trigger")
-	breakVehiclesDarkroom:Setup(eventName, "breakVehiclesDarkroom", Vector(-5245.2, -1057.2, 159.9), Vector(-5247.3, -1056.7, -143.9))
+	breakVehiclesDarkroom:Setup(eventName, "breakVehiclesDarkroom", Vector(-5252.1, -2571.6, 138.1), Vector(-3263.6, -1071.8, -102.9))
 
     function breakVehiclesGarage:StartTouch(ent)
         StartTouch(ent, 40)
