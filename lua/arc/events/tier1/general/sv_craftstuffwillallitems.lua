@@ -120,7 +120,7 @@ marker:SetPos(st)
 marker:Setup(eventName,"checkForItems",st + Vector(100,100,100),st + Vector(-100,-100,-100))
 hook.Add("Think","itemcheckthgiujhigh34uihfiu34hfu345hg4",function()
 for _,c in pairs( ents.FindInSphere( marker:LocalToWorld(Vector(0,0,10) ), 100 ) ) do
-if c:GetClass() == "prop_dynamic" and c:GetName() == "Table" and c:GetNWInt("itemsontable") >= 1 then
+if c:GetClass() == "prop_dynamic" and c:GetName() == "Table" and c:GetNWInt("itemsontable") >= 7 then
 c:SetNWInt("itemsontable",0)
 c:EmitSound("vo/ravenholm/madlaugh03.wav")
 timer.Simple(5,function()
@@ -135,7 +135,7 @@ monk:SetPos(Vector(2540.65, 3558.35, -167.97))
 monk:SetAngles(Angle(0,190,0))
 monk:Spawn()
 GM13.NPC:AttackClosestPlayer(monk)
-monk:SetNWFloat("CustomHealth",1)
+monk:SetNWFloat("CustomHealth",1000)
 monk:SetNWBool("isdead",false)
 GM13.Map:BlockCleanup(true)
 monk:SetNWBool("customdamageenabledbeta13",true)
