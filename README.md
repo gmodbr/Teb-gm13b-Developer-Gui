@@ -13,6 +13,16 @@ One aspect that sets these map curses apart from other maps is that there are no
 
 In order to understand the bigger problem ARC hopes to uncover mysteries on their own, even if they have multiple parts, and to reveal the causes of events that seem random (like the discovery we made of why cars suddenly break down).
 
+# How to set up the addon
+
+The only thing you need to do is clone the repository inside GMod addons folder and keep the directory name.
+
+![image](https://user-images.githubusercontent.com/5098527/159203352-c207a70a-b701-46b1-bf04-a0c71ff40c96.png)
+
+That way the files will run and prevail over the ones added on the map and you can do your tests without worries.
+
+# Links
+
 [gm_construct_13 beta](https://steamcommunity.com/sharedfiles/filedetails/?id=2553727051)
 
 [AMTF map Wiki](https://gmconstruct-13-beta.fandom.com/wiki/Gm_construct_13_beta_Wiki)
