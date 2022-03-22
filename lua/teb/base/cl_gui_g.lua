@@ -15,11 +15,17 @@ if CLIENT then
       local Devmode = vgui.Create( "DCheckBoxLabel", DermaPanel )
       Devmode:SetPos(10,50)
       Devmode:SetText("Developer Mode")
-      --Devmode:SetConVar("sbox_godmode") -- TODO: Find a way i can change GM13.DevMode
+      --Devmode:SetConVar("sbox_godmode") -- TODO: Find a way i can change GM13.DevMode -- Does Below work?
+      local IsDevOn = false
       if GM13.DevMode then
          Devmode:SetValue(true)
+         IsDevOn = true
       else
          Devmode:SetValue(false)
+         IsDevOn = false
+      end
+      CheckBoxThing.OnChange = function(pSelf, val)
+         GM13.DevMode = val
       end
       Devmode:SizeToContents()
       
