@@ -14,7 +14,7 @@ if CLIENT then
       -- Toggle DevMode
       local Devmode = vgui.Create( "DCheckBoxLabel", DermaPanel )
       Devmode:SetPos(10,50)
-      Devmode:SetText("God Mode")
+      Devmode:SetText("Developer Mode")
       --Devmode:SetConVar("sbox_godmode") -- TODO: Find a way i can change GM13.DevMode
       if GM13.DevMode then
          Devmode:SetValue(true)
