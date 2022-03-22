@@ -1,6 +1,6 @@
 if CLIENT then
    -- I have no idea what i am doing. - TheEndBoss_101
-	function frame_create()
+   function frame_create()
       local DermaPanel = vgui.Create( "DFrame" )
       DermaPanel:SetPos( 50,50 )
       DermaPanel:SetSize( 200, 250 )
@@ -32,18 +32,18 @@ if CLIENT then
       TierSlider:SetMax(4)
       TierSlider:SetDecimals(0)
       TierSlider:SetConVar("gm13_tier")
-	end
-	function frame_open()
-		DermaPanel:SetVisible(true)
-	end
-	function frame_close()
-		DermaPanel:SetVisible(false)
-	end
+   end
+   function frame_open()
+      DermaPanel:SetVisible(true)
+   end
+   function frame_close()
+      DermaPanel:SetVisible(false)
+   end
    -- Commands
    concommand.Add("cgm13d_vgui_rebuild",frame_create)
    concommand.Add("cgm13d_vgui_close",frame_close)
-	concommand.Add("cgm13d_vgui_open",frame_open)
-	concommand.Add("-cgm13d_vgui",frame_close)
-	concommand.Add("+cgm13d_vgui",frame_open)
-	hook.Add("Initialize","init_cgm13d_vgui",frame_create)
+   concommand.Add("cgm13d_vgui_open",frame_open)
+   concommand.Add("-cgm13d_vgui",frame_close)
+   concommand.Add("+cgm13d_vgui",frame_open)
+   hook.Add("Initialize","init_cgm13d_vgui",frame_create)
 end
