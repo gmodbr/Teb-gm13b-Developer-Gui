@@ -4,8 +4,8 @@ if CLIENT then
       local DermaPanel = vgui.Create( "DFrame" )
       DermaPanel:SetPos( 50,50 )
       DermaPanel:SetSize( 200, 250 )
-      DermaPanel:SetTitle( "gm_construct 13 beta Debug Gui" )
-      DermaPanel:SetVisible(false)
+      DermaPanel:SetTitle( "gm_construct 13 beta - Debug Gui" )
+      DermaPanel:SetVisible(false) -- Will ALAWAYS show up if set to true.
       DermaPanel:SetDraggable(true)
       DermaPanel:ShowCloseButton(true)
       DermaPanel:SetBackgroundBlur(true)
