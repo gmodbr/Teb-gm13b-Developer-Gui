@@ -24,7 +24,7 @@ if CLIENT then
          Devmode:SetValue(false)
          IsDevOn = false
       end
-      CheckBoxThing.OnChange = function(pSelf, val)
+      Devmode.OnChange = function(pSelf, val)
          GM13.DevMode = val
       end
       Devmode:SizeToContents()
