@@ -6,6 +6,7 @@ A simple developer gui.
 
 The only thing you need to do is clone the repository inside GMod addons folder and keep the directory name.
 
+MIT License
 # Links
 
 [gm_construct_13 beta](https://steamcommunity.com/sharedfiles/filedetails/?id=2553727051)
