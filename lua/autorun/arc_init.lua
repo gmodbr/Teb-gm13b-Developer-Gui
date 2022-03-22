@@ -9,7 +9,8 @@
 ]]
 
 CGM13 = { -- Community GM13
-	Vehicle = {}
+	Vehicle = {},
+	Custom = {}
 }
 
 hook.Add("Initialize", "arc_int", function()
