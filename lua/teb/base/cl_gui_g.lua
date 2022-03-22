@@ -10,6 +10,7 @@ if CLIENT then
       DermaPanel:ShowCloseButton(true)
       DermaPanel:SetBackgroundBlur(true)
       DermaPanel:MakePopup()
+      DermaPanel:Center()
       
       -- Toggle DevMode
       local Devmode = vgui.Create( "DCheckBoxLabel", DermaPanel )
