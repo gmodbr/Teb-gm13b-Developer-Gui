@@ -32,12 +32,15 @@ local function BreakSimphys(vehicle)
         vehicle:StopEngine()
     end
 
+    if vehicle.SetValues then
+        vehicle:SetValues()
+    end
+
     if vehicle.StartEngine then 
         vehicle.StartEngine = function() return end 
     end
 
     if vehicle.SetActive then
-        vehicle:SetActive(false)
         vehicle.SetActive = function() return end
     end
 
