@@ -1,7 +1,9 @@
+local cgm13bd_vugi_debug = true 
+
 if CLIENT then
    -- I have no idea what i am doing. - TheEndBoss_101
    function gm13b_DermaFrame()
-	   --print("Community GM13Beta Debug Derma GUI Loading...")
+	   if cgm13bd_vugi_debug then print("Community GM13Beta Debug Derma GUI Loading...") end
       local DermaFrame = vgui.Create("DFrame")
       DermaFrame:SetPos(50,50)
       DermaFrame:SetSize(ScrW() / 3, ScrH() / 2)
@@ -51,7 +53,7 @@ if CLIENT then
       end
       function Devmode:OnChange(val)
          GM13.devMode = val
-         print("GM13.devMode",val)
+         if cgm13bd_vugi_debug then print("GM13.devMode",val) end
       end
       
       -- Tier Slider
@@ -62,6 +64,7 @@ if CLIENT then
       TierSlider:SetMin(1)
       TierSlider:SetMax(4)
       TierSlider:SetDecimals(0)
+      TierSlider:SetValue(gm13_tier)
       TierSlider:SetConVar("gm13_tier")
       TierSlider:SizeToContents()
 
@@ -80,22 +83,35 @@ if CLIENT then
       MemoriesTabLabel:SetText("Edit Memories")
       MemoriesTabLabel:SizeToContents()
 
-      -- Cone
-      local Memories_Cone_Button = vgui.Create("DButton" , MemoriesTab)
-      Memories_Cone_Button:SetPos(5,30)
-      Memories_Cone_Button:SetSize(100, 15)
-      Memories_Cone_Button:SetText("Get Cone (savedCitizen)")
-      Memories_Cone_Button:SizeToContents()
-      Memories_Cone_Button.DoClick = function()
-         net.Start("Cone_Memory")
-         net.WriteString("Cone_Memory")
+      -- savedCitizen
+      local Memory_savedCitizen_Button = vgui.Create("DButton" , MemoriesTab)
+      Memory_savedCitizen_Button:SetPos(5,30)
+      Memory_savedCitizen_Button:SetSize(100, 15)
+      Memory_savedCitizen_Button:SetText("Get The Cone (savedCitizen)")
+      Memory_savedCitizen_Button:SizeToContents()
+      Memory_savedCitizen_Button.DoClick = function()
+         net.Start("Memory")
+         net.WriteString("savedCitizen")
          net.SendToServer()
-         game.CleanUpMap()
+         if cgm13bd_vugi_debug then print("Send savedCitizen") end
+      end
+
+       -- ratmanInit
+      local Memory_ratmanInit_Button = vgui.Create("DButton" , MemoriesTab)
+      Memory_ratmanInit_Button:SetPos(5,60)
+      Memory_ratmanInit_Button:SetSize(100, 15)
+      Memory_ratmanInit_Button:SetText("Spawn Ratman (ratmanInit)")
+      Memory_ratmanInit_Button:SizeToContents()
+      Memory_ratmanInit_Button.DoClick = function()
+         net.Start("Memory")
+         net.WriteString("ratmanInit")
+         net.SendToServer()
+         if cgm13bd_vugi_debug then print("Send ratmanInit") end
       end
 
       PropertySheet:AddSheet( "Main", MainTab, "icon16/group.png", false, false, "The main Property Sheet")
       PropertySheet:AddSheet( "Memories", MemoriesTab, "icon16/user.png", false, false, "Edit Memories")
-      --print("Community GM13Beta Debug Derma GUI Loaded.")
+      if cgm13bd_vugi_debug then print("Community GM13Beta Debug Derma GUI Loaded.") end
    end
 
    -- bind "n" "cgm13d_vgui"
@@ -103,18 +119,23 @@ if CLIENT then
 end
 
 if SERVER then
---   function Cone_Memory()
---      GM13.Event.Memory:Set("savedCitizen", true)
---   end
-   -- Cone Memory
-   util.AddNetworkString("Cone_Memory")
+   concommand.Add("cgm13d_devmode",enabledevsrv)
+   function enabledevsrv()
+      if GM13.devMode then
+         GM13.devMode = 0
+         if cgm13bd_vugi_debug then print("Server Dev Mode Off") end
+      else
+         GM13.devMode = 1
+         if cgm13bd_vugi_debug then print("Server Dev Mode On") end
+      end
+   end
+
+   util.AddNetworkString("Memory")
    local MsgNameReceived = function()
       local RecMemory = net.ReadString()
-      --local RecWhatToDo = net.ReadString()
-      if RecMemory == "Cone_Memory" then
-         GM13.Event.Memory:Set("savedCitizen", true)
-      end
+      if cgm13bd_vugi_debug then print("Receve Memory") end
+      GM13.Event.Memory:Set(RecMemory, true)
 	end
-	net.Receive("Cone_Memory", MsgNameReceived)
+	net.Receive("Memory", MsgNameReceived)
 
 end
