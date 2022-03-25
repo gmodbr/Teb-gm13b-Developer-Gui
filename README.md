@@ -4,14 +4,37 @@ A simple developer gui.
 
 # How to set up the addon
 
-The only thing you need to do is clone the repository inside GMod addons folder and keep the directory names.
+The only thing you need to do is clone the repository inside GMod addons folder and keep the directory names. Like so.
 
+<figure>
+    <img src="./img/addons.png" alt="Addons Folder" width="570" height="100">
+    <figcaption>The Addons Folder</figcaption>
+</figure>
+
+<!--
 # Images
 
-![Main Tab](/img/main.png "Main Tab")  
-![Memories Tab](/img/mem.png "Memories Tab")  
-![Map Tab](/img/maptop.png "Map Tab")  
-![Map Tab](/img/mapbtm.png "Map Tab")
+<figure>
+    <img src="./img/main.png" alt="Main Tab" width="250" height="200">
+    <figcaption>The Main Tab</figcaption>
+</figure>
+<figure>
+    <img src="./img/mem.png" alt="Memories Tab" width="250" height="200">
+    <figcaption>The Memories Tab</figcaption>
+</figure>
+<figure>
+    <img src="./img/maptop.png" alt="Map Tab Top" width="250" height="200">
+    <figcaption>The Map Tab Top</figcaption>
+</figure>
+<figure>
+    <img src="./img/mapbtm.png" alt="Map Tab Bottom" width="250" height="200">
+    <figcaption>The Map Tab Bottom</figcaption>
+</figure>
+<figure>
+    <img src="./img/addons.png" alt="Addons Folder" width="570" height="100">
+    <figcaption>The Addons Folder</figcaption>
+</figure>
+-->
 
 # Q & A / FAQ
 
