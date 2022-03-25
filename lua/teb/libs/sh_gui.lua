@@ -1,5 +1,5 @@
 -- I have no idea what i am doing. - TheEndBoss_101
--- 3/23/2022 319 lines, This is getting big
+-- 3/23/2022 320 lines, This is getting big
 
 local cgm13bd_vugi_debug = true 
 
@@ -51,8 +51,8 @@ if CLIENT then
       -- top
       MapTab_Image_top = vgui.Create("DImage", MapTab_Top)
       MapTab_Image_top:SetImage( "teb/cgm13d/top" )
-      MapTab_Image_top:SetPos(100, 5)
-      MapTab_Image_top:SetSize(396, 396)
+      MapTab_Image_top:SetPos(50, 5)
+      MapTab_Image_top:SetSize(496, 396)
       --MapTab_Image_top:SizeToContents()
       -- Btm
       MapTab_Image_btm = vgui.Create("DImage", MapTab_Btm)
@@ -210,6 +210,7 @@ if CLIENT then
       --TransCategoryList:EnableHorizontal(false)
       --TransCategoryList:EnableVerticalScrollbar(true)
       TransCategoryList:Dock(FILL)
+      TransCategoryList:AddItem(TransCategoryList)
       --transmissionsCategory:SetContents(TransCategoryList)
 
       --transmission1
