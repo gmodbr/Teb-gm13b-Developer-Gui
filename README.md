@@ -52,13 +52,40 @@ The only thing you need to do is clone the repository inside GMod addons folder 
 
 # Links
 
-[gm_construct_13 beta](https://steamcommunity.com/sharedfiles/filedetails/?id=2553727051)
+> ## Addons
+>
+> [gm_construct_13 beta](https://steamcommunity.com/sharedfiles/filedetails/?id=2553727051)
+>
+> [gm_construct 13 beta v2](https://steamcommunity.com/sharedfiles/filedetails/?id=2580632976)
+>
+> [Mingebags (incredibly smart)](https://steamcommunity.com/sharedfiles/filedetails/?id=2762511940)
+>
+> ### Dupes
+>
+> [Mingebag Seal Ritual](https://steamcommunity.com/sharedfiles/filedetails/?id=2766366126)
+>
+> [GM_13_Beta Curse Detector](https://steamcommunity.com/sharedfiles/filedetails/?id=2774605058) <!-- I made this. -->
 
-[AMTF map Wiki](https://gmconstruct-13-beta.fandom.com/wiki/Gm_construct_13_beta_Wiki)
+>## Youtube
+>
+> [GMod - Hunting Mingebags in 2022 (Real)](https://www.youtube.com/watch?v=T4xQKoOnjcE)
 
-[ARC Discord](https://discord.gg/97UpY3D7XB)
+> ## Extention Packs
+>
+> [Anomaly Research Center (A.R.C.)](https://github.com/Xalalau/Anomaly-Research-Center-ARC)
 
-[AMTF Discord](https://discord.gg/dw3rVqMhr7)
+> ## Wikis
+>
+> [A.M.T.F. map Wiki](https://gmconstruct-13-beta.fandom.com/wiki/Gm_construct_13_beta_Wiki)
+
+> ## Discord Servers
+>
+> [A.R.C. Discord](https://discord.gg/97UpY3D7XB)
+>
+> [A.M.T.F. Discord](https://discord.gg/dw3rVqMhr7)
+<!-->
+> [GMBR Discord](https://discord.gg/ytkXGNU), GMBR is in, Portuguese mainly.
+-->
 
 # License
 
