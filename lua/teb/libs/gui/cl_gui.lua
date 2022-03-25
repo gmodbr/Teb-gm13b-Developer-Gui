@@ -14,7 +14,6 @@ function GM13Panel:CreateWindow()
    DermaFrame:SetDeleteOnClose(true)
    DermaFrame:SetMouseInputEnabled(true)
    DermaFrame:SetKeyboardInputEnabled(true)
-   --DermaFrame:SetTextColor(Color(50, 53, 59))
    DermaFrame:MakePopup()
    DermaFrame:Center()
 
@@ -24,16 +23,20 @@ function GM13Panel:CreateWindow()
    PropertySheet:Dock(FILL)
 
    local MainTab = vgui.Create("DPanel")
-   --MainTab:SetParent( PropertySheet )
    MainTab:SetBackgroundColor(Color(51, 51, 51))
 
    local MemoriesTab = vgui.Create("DPanel")
-   --MemoriesTab:SetParent( PropertySheet )
    MemoriesTab:SetBackgroundColor(Color(51, 51, 51))
 
    local MapTab = vgui.Create("DPanel")
-   --MapTab:SetParent( PropertySheet )
    MapTab:SetBackgroundColor(Color(51, 51, 51))
+
+   --MapTab_Image_btm:SizeToContents()
+   local wtrmrk = vgui.Create("DImage", DermaFrame) --mobenixcitizen2007 sugested this. TODO:Add a dot ploting a plr pos.
+   wtrmrk:SetPos(570, 440)
+   wtrmrk:SetSize(60, 85)
+   --MapTab_Image_btm:SizeToContents()
+   wtrmrk:SetImage( "teb/cgm13d/cone" )
 
    GM13Panel:FillMainTab(MainTab)
    GM13Panel:FillMemoriesTab(MemoriesTab)

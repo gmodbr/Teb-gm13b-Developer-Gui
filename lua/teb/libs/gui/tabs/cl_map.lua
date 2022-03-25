@@ -4,10 +4,8 @@ function GM13Panel:FillMapTab(MapTab)
     MapTab_PropertySheet:Dock(FILL)
  
     local MapTab_Top = vgui.Create("DPanel")
-    --MapTab:SetParent( PropertySheet )
     MapTab:SetBackgroundColor(Color(51, 51, 51))
     local MapTab_Btm = vgui.Create("DPanel")
-    --MapTab:SetParent( PropertySheet )
     MapTab:SetBackgroundColor(Color(51, 51, 51))
     -- Mini Map Tab
     -- top
