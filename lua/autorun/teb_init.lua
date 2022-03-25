@@ -11,5 +11,6 @@ CGM13D = { -- Community GM13 Developer
 }
 
 hook.Add("Initialize", "teb_int", function()
+	--GM13:AddBase("teb") -- Legacy
 	GM13:IncludeBase("teb")
 end)
