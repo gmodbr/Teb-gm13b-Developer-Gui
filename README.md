@@ -66,7 +66,7 @@ The only thing you need to do is clone the repository inside GMod addons folder 
 >
 > [GM_13_Beta Curse Detector](https://steamcommunity.com/sharedfiles/filedetails/?id=2774605058) <!-- I made this. -->
 
->## Youtube
+> ## Youtube
 >
 > [GMod - Hunting Mingebags in 2022 (Real)](https://www.youtube.com/watch?v=T4xQKoOnjcE)
 
@@ -83,10 +83,12 @@ The only thing you need to do is clone the repository inside GMod addons folder 
 > [A.R.C. Discord](https://discord.gg/97UpY3D7XB)
 >
 > [A.M.T.F. Discord](https://discord.gg/dw3rVqMhr7)
+
 <!-->
+
 > [GMBR Discord](https://discord.gg/ytkXGNU), GMBR is in, Portuguese mainly.
--->
+> -->
 
 # License
 
-MIT License
+[MIT License](/LICENSE.md)
