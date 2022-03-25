@@ -291,16 +291,11 @@ if CLIENT then
 end
 
 if SERVER then
-   function enabledevsrv()
-      if GM13.devMode then
-         GM13.devMode = 0
-         if cgm13bd_vugi_debug then print("Server Dev Mode Off") end
-      else
-         GM13.devMode = 1
-         if cgm13bd_vugi_debug then print("Server Dev Mode On") end
-      end
+   function toggledevsrv()
+      GM13:ToggleDevMode()
+      print("GM13 Dev Mode " .. (GM13.devMode and "On" or "Off"))
    end
-   concommand.Add("cgm13d_devmode",enabledevsrv)
+   concommand.Add("cgm13d_devmode",toggledevsrv)
 
    util.AddNetworkString("Memory")
    local MsgNameReceived = function()
