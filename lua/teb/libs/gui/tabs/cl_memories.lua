@@ -62,12 +62,12 @@ function GM13Panel:FillMemoriesTab(MemoriesTab)
     TransmissionsCategory:SizeToContents()
     Memories_Tab_List:AddItem(TransmissionsCategory)
  
-    local TransCategoryList = vgui.Create("DScrollPanel", TransmissionsCategory)
+    local TransCategoryList = vgui.Create("DScrollPanel")
     TransCategoryList:Dock(FILL)
-    TransCategoryList:AddItem(TransCategoryList)
+    TransmissionsCategory:SetContents(TransCategoryList)
  
     --transmission1
-    local Memory_transmission1_Button = vgui.Create("DButton", TransCategoryList)
+    local Memory_transmission1_Button = vgui.Create("DButton")
     Memory_transmission1_Button:SetText("Transmission 1 (transmission1)")
     Memory_transmission1_Button:Dock( TOP )
     Memory_transmission1_Button:DockMargin( 0, 0, 0, 5 )
