@@ -39,9 +39,12 @@ function GM13Panel:CreateWindow()
    local MapTab = vgui.Create("DPanel")
    MapTab:SetBackgroundColor(Color(51, 51, 51))
 
-   local wtrmrk = vgui.Create("DImage", DermaFrame) --mobenixcitizen2007 sugested this. TODO:Add a dot ploting a plr pos.
+   local wtrmrk = vgui.Create("DImageButton", DermaFrame) --mobenixcitizen2007 sugested this. TODO:Add a dot ploting a plr pos.
    wtrmrk:SetPos(570, 440)
    wtrmrk:SetSize(60, 85)
+   wtrmrk.DoClick = function()
+	   surface.PlaySound("lemon_rant.wav")
+   end
    local WtrmrkMath = math.random(1, 7) -- Has to be a better way
    if WtrmrkMath == 1 then
          wtrmrk:SetImage("teb/cgm13d/arc")

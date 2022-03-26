@@ -53,7 +53,7 @@ function GM13Panel:FillMainTab(MainTab)
    -- 2796-1646-20
    local Button_2796_1646_20 = vgui.Create("DButton")
    Button_2796_1646_20:SetText("2796-1646-20 ")
-   Button_2796_1646_20:SetConsoleCommand("2796-1646-20 ")
+   Button_2796_1646_20:SetConsoleCommand("2796-1646-20")
    Button_2796_1646_20:Dock( TOP )
    Button_2796_1646_20:DockMargin( 0, 0, 0, 5 )
    Button_2796_1646_20:SizeToContents()
