@@ -50,6 +50,10 @@ The only thing you need to do is clone the repository inside GMod addons folder 
 > Q: Where can I make a bug report?  
 > A: [Here](https://github.com/TheEndBoss-101/Teb-gm13b-Developer-Gui/issues)
 
+> Q: Help! It wont work!  
+> A: Did you installed it in the correct location?  
+> A: Did you installed it while gmod is running, If so restart gmod.
+
 # Links
 
 > ## Addons

@@ -11,42 +11,30 @@ function GM13Panel:FillarcTab(arcTab)
   arc_Tab_Label:DockMargin( 0, 0, 0, 5 )
   arc_Tab_List:AddItem(arc_Tab_Label)
   
-  -- Cone Tier Slider -- gust straight up not working.
+  -- Cone Tier Slider
   local ConeTierSlider = vgui.Create("DNumSlider")
   ConeTierSlider:SetText("Edit Cone Tier")
-  ConeTierSlider:SetMin(0)
-  ConeTierSlider:SetMax(3)
+  ConeTierSlider:SetMin(1)
+  ConeTierSlider:SetMax(10)
   ConeTierSlider:SetDecimals(0)
-  ConeTierSlider:SetValue(0)
+	local conemem = GM13.Event.Memory:Get("coneLevel")
+  if conemem == nil then
+    ConeTierSlider:SetValue(0)
+  else
+    ConeTierSlider:SetValue(conemem)
+  end
   ConeTierSlider:Dock( TOP )
   ConeTierSlider:DockMargin( 0, 0, 0, 5 )
   ConeTierSlider:SizeToContents()
-  ConeTierSlider.OnValueChanged = function(val) -- Easy, Yet Messy.
-    if val == 0 then
+  ConeTierSlider.OnValueChanged = function(self, val) -- causes a lot of lag.
+    timer.Create("cgm13_memory_slider", 0.2, 1, function()
       net.Start("gm13_event_memory_set")
       net.WriteString("coneLevel")
-      net.WriteString("0")
+      net.WriteString(tostring(val))
       net.SendToServer()
-      print("Send ConeLevel")
-    elseif val == 1 then
-      net.Start("gm13_event_memory_set")
-      net.WriteString("coneLevel")
-      net.WriteString("1")
-      net.SendToServer()
-      print("Send ConeLevel")
-    elseif val == 2 then
-      net.Start("gm13_event_memory_set")
-      net.WriteString("coneLevel")
-      net.WriteString("2")
-      net.SendToServer()
-      print("Send ConeLevel")
-    elseif val == 3 then
-      net.Start("gm13_event_memory_set")
-      net.WriteString("coneLevel")
-      net.WriteString("3")
-      net.SendToServer()
-      print("Send ConeLevel")
-    end
+      print("Send ConeLevel: From: " .. tostring(GM13.Event.Memory:Get("coneLevel")) .. " To: " .. tostring(val))
+      print(val)
+    end)
   end
-  arc_Tab_List:AddItem(ConeTierSlider)--]]
+  arc_Tab_List:AddItem(ConeTierSlider)
  end

@@ -8,6 +8,21 @@ end
 
 -- This could be done WAY Better, Nvm did it way better.
 
+--[[net.Receive("gm13_event_memory_get", function()
+   local RecMemory1 = net.ReadString()
+   local RecMemory2 = net.ReadString()
+   local RecMemory3 = net.ReadString()
+   local RecMemory4 = net.ReadString()
+   local RecMemory5 = net.ReadString()
+
+   GM13.Event.Memory:Get(RecMemory1)
+   GM13.Event.Memory:Get(RecMemory2)
+   GM13.Event.Memory:Get(RecMemory3)
+   GM13.Event.Memory:Get(RecMemory4)
+   GM13.Event.Memory:Get(RecMemory5)
+   print("Receved.")
+end)--]]
+
 net.Receive("gm13_event_memory_set", function()
    local RecMemory1 = net.ReadString()
    local RecMemory1a = net.ReadString()
