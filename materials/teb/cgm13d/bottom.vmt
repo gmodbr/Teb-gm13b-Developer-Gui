@@ -1,5 +1,7 @@
 "UnlitGeneric"
 {
 	"$basetexture" "teb/cgm13d/bottom"
+	"%keywords" "MapBottom"
+	"$nolod" 1
 	"$translucent" 1
 }

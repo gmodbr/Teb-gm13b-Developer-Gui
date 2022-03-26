@@ -1,5 +1,4 @@
 function GM13Panel:FillMemoriesTab(MemoriesTab)
-    -- Memories Tab
     -- Desc
     local Memories_Tab_List = vgui.Create("DScrollPanel", MemoriesTab)
     Memories_Tab_List:Dock(FILL)
