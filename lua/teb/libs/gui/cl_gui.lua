@@ -39,6 +39,9 @@ function GM13Panel:CreateWindow()
    local MapTab = vgui.Create("DPanel")
    MapTab:SetBackgroundColor(Color(51, 51, 51))
 
+   local DebugTab = vgui.Create("DPanel")
+   DebugTab:SetBackgroundColor(Color(51, 51, 51))
+
    local wtrmrk = vgui.Create("DImageButton", DermaFrame) --mobenixcitizen2007 sugested this. TODO:Add a dot ploting a plr pos.
    wtrmrk:SetPos(570, 440)
    wtrmrk:SetSize(60, 85)
@@ -51,6 +54,9 @@ function GM13Panel:CreateWindow()
          wtrmrk:SetSize(65, 85)
       elseif WtrmrkMath == 2 then
          wtrmrk:SetImage("teb/cgm13d/blackfigure")
+         wtrmrk.DoClick = function()
+	         surface.PlaySound("teb/cgm13d/StillAlive.wav")
+         end
       elseif WtrmrkMath == 3 then
          wtrmrk:SetImage("teb/cgm13d/coneoff")
       elseif WtrmrkMath == 4 then
@@ -60,7 +66,7 @@ function GM13Panel:CreateWindow()
       elseif WtrmrkMath == 6 then
          wtrmrk:SetImage("teb/cgm13d/mingebag")
          wtrmrk.DoClick = function()
-	         surface.PlaySound("lemon_rant.wav")
+	         surface.PlaySound("teb/cgm13d/lemon_rant.wav")
          end
       elseif WtrmrkMath == 7 then
          wtrmrk:SetImage("teb/cgm13d/semper")
@@ -69,13 +75,15 @@ function GM13Panel:CreateWindow()
    end
 
    GM13Panel:FillMainTab(MainTab)
-   GM13Panel:FillMemoriesTab(MemoriesTab)
    GM13Panel:FillMapTab(MapTab)
+   GM13Panel:FillMemoriesTab(MemoriesTab)
+   GM13Panel:FillDebugTab(DebugTab)
    GM13Panel:FillarcTab(arcTab)
 
    PropertySheet:AddSheet( "Main", MainTab, "icon16/user.png", false, false, "The main Property Sheet")
-   PropertySheet:AddSheet( "Memories", MemoriesTab, "icon16/application_xp_terminal.png", false, false, "Edit Memories")
    PropertySheet:AddSheet( "MiniMap", MapTab, "icon16/pictures.png", false, false, "Mini Map")
+   PropertySheet:AddSheet( "Memories", MemoriesTab, "icon16/application_osx_terminal.png", false, false, "Edit Memories")
+   PropertySheet:AddSheet( "Debug", DebugTab, "icon16/application_xp_terminal.png", false, false, "Edit ConCommands")
    PropertySheet:AddSheet( "A.R.C.", arcTab, "teb/cgm13d/arc16", false, false, "Anomaly Research Center")
 end
 
