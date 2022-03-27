@@ -1,6 +1,6 @@
-# TheEndBoss_101's gm_construct 13 beta Dev VGUI
+# TheEndBoss_101's GM13B Derma GUI
 
-A simple developer gui.
+A simple derma gui for gm13 beta.
 
 # How to set up the addon
 
