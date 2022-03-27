@@ -52,10 +52,13 @@ function GM13Panel:CreateWindow()
    if WtrmrkMath == 1 then
          wtrmrk:SetImage("teb/cgm13d/arc")
          wtrmrk:SetSize(65, 85)
+         wtrmrk.DoClick = function()
+	         surface.PlaySound("teb/cgm13d/StillAlive.wav")
+         end
       elseif WtrmrkMath == 2 then
          wtrmrk:SetImage("teb/cgm13d/blackfigure")
          wtrmrk.DoClick = function()
-	         surface.PlaySound("teb/cgm13d/StillAlive.wav")
+	         surface.PlaySound("teb/cgm13d/dialup.wav")
          end
       elseif WtrmrkMath == 3 then
          wtrmrk:SetImage("teb/cgm13d/coneoff")

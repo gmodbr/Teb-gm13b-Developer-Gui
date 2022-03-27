@@ -1,3 +1,4 @@
+--if CGM13D.ShowTools then
 TOOL.Category = "gmc13b"
 TOOL.Name = "#Tool.getpos.name"
 TOOL.Command = nil
@@ -33,3 +34,4 @@ end
 function TOOL.BuildCPanel(pnl)
 	pnl:AddControl("Header",{Text = "#Tool.getpos.name", Description = "#Tool.getpos.desc"})
 end
+--end

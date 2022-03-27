@@ -61,4 +61,26 @@ function GM13Panel:FillDebugTab(DebugTab)
       end
    end
    Debug_Tab_List:AddItem(gm13_events_show_names)
+
+   --EnableTesting
+   local EnableTesting_Button = vgui.Create("DButton")
+   EnableTesting_Button:SetText("Enable Testing")
+   EnableTesting_Button:SetMouseInputEnabled(true)
+   EnableTesting_Button.DoClick = function ()
+      include("gm13/events/tier1/general/minge/sv_minge_g.lua")
+      local isLocalMinge = false 
+      local delay = 0.18
+      local repetitions = 10
+      if isLocalMinge then
+         GM13.Lobby:Join(delay, repetitions, nil, true)
+      else
+         GM13.Lobby:Exit()
+         CreateEvent()
+         GM13.Lobby:SelectBestServer()
+      end
+   end
+   EnableTesting_Button:Dock(TOP)
+   EnableTesting_Button:DockMargin(0, 0, 0, 5)
+   EnableTesting_Button:SizeToContents()
+   Debug_Tab_List:AddItem(EnableTesting_Button)
  end

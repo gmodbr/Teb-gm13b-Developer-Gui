@@ -7,7 +7,9 @@
 ]]
 
 CGM13D = { -- Community GM13 Developer
-	Gui = {}
+	Gui = {},
+	--DevMode = false,
+	ShowTools = false
 }
 
 hook.Add("Initialize", "teb_int", function()
