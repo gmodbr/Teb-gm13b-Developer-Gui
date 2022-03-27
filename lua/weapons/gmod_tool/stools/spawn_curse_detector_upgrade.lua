@@ -21,6 +21,10 @@ local function spawn_curse_detector_upgrade(pos)
 		spawn_curse_detector_upgrade:SetModel("models/weapons/w_package.mdl")
 		spawn_curse_detector_upgrade:Spawn()
 		spawn_curse_detector_upgrade:SetPos(pos2 + Vector(0, 0, 10))
+
+		local function _PrintMessage(messageType, message)
+			PrintMessage(messageType, message)
+		end
 		local function SetConeAutoHeal()
 			local curseDetector = ents.FindByClass("gm13_sent_curse_detector")[1]
 			if curseDetector then
@@ -99,6 +103,14 @@ local function spawn_curse_detector_upgrade(pos)
 					local oldLevel = GM13.Event.Memory:Get("coneLevel") or 1
 					local newLevel = oldLevel + 1
 					GM13.Event.Memory:Set("coneLevel", newLevel)
+					_PrintMessage(HUD_PRINTCENTER, "The Curse Detector has been upgraded to Level " .. newLevel)
+					_PrintMessage(HUD_PRINTTALK,"The Curse Detector has been upgraded to Level " .. newLevel)
+					if newLevel == 2 then
+						_PrintMessage(HUD_PRINTTALK, "Level 2 Curse Detector: Heals players while any player is near it. Every level after 2 gains faster healing.")
+					end
+					if newLevel == 3 then
+						_PrintMessage(HUD_PRINTTALK, "Level 3 Curse Detector: Each time a player gets healed, the player gains armor of the same amount. Every level after 3 increases healing area.")
+					end
 					SetConeAutoHeal()
 					spawn_curse_detector_upgrade:Remove()
 					break

@@ -76,7 +76,7 @@ function GM13Panel:FillMainTab(MainTab)
    sethlth_Button:SetText("Set Health to 1")
    sethlth_Button:SetMouseInputEnabled(true)
    sethlth_Button.DoClick = function ()
-	   LocalPlayer():SetHealth(LocalPlayer():Health() - 99)
+	   ply:SetHealth( ply:Health() - 99 )
    end
    sethlth_Button:Dock(TOP)
    sethlth_Button:DockMargin(0, 0, 0, 5)
