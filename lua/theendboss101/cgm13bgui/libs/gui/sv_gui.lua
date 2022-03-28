@@ -1,7 +1,15 @@
 util.AddNetworkString("gm13_toggle_devmode")
 util.AddNetworkString("gm13_event_memory_set")
+util.AddNetworkString("gm13_plr_take_damage")
 
 -- This could be done WAY Better, Nvm did it way better.
+
+net.Receive("gm13_plr_take_damage", function()
+   local Damage = net.ReadString()
+
+   Entity(1):TakeDamage(Damage)
+   print("Receved.")
+end)
 
 net.Receive("gm13_event_memory_set", function()
    local RecMemory1 = net.ReadString()
@@ -25,7 +33,6 @@ end)
 
 local function toggledevsrv()
    GM13:ToggleDevMode()
-   print("GM13 Dev Mode " .. (GM13.devMode and "On" or "Off"))
 end
 
 net.Receive("gm13_toggle_devmode", function(_, ply)

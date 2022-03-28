@@ -1,9 +1,9 @@
 -- I have no idea what im doing. - TheEndBoss_101
 -- you're doing some cool stuff - Xalalau
 
-GM13Panel = {}
+C_GM13B_GUI_Panel = {}
 
-function GM13Panel:CreateWindow()
+function C_GM13B_GUI_Panel:CreateWindow()
    print("Community GM13Beta Debug Derma GUI Loading...")
 
    math.randomseed(os.time())
@@ -50,38 +50,38 @@ function GM13Panel:CreateWindow()
    --end
    local WtrmrkMath = math.random(1, 7) -- Has to be a better way
    if WtrmrkMath == 1 then
-         wtrmrk:SetImage("teb/cgm13d/arc")
+         wtrmrk:SetImage("theendboss101/cgm13bgui/arc")
          wtrmrk:SetSize(65, 85)
          wtrmrk.DoClick = function()
-	         surface.PlaySound("teb/cgm13d/StillAlive.wav")
+	         surface.PlaySound("theendboss101/cgm13bgui/StillAlive.wav")
          end
       elseif WtrmrkMath == 2 then
-         wtrmrk:SetImage("teb/cgm13d/blackfigure")
+         wtrmrk:SetImage("theendboss101/cgm13bgui/blackfigure")
          wtrmrk.DoClick = function()
-	         surface.PlaySound("teb/cgm13d/dialup.wav")
+	         surface.PlaySound("theendboss101/cgm13bgui/dialup.wav")
          end
       elseif WtrmrkMath == 3 then
-         wtrmrk:SetImage("teb/cgm13d/coneoff")
+         wtrmrk:SetImage("theendboss101/cgm13bgui/coneoff")
       elseif WtrmrkMath == 4 then
-         wtrmrk:SetImage("teb/cgm13d/coneon")
+         wtrmrk:SetImage("theendboss101/cgm13bgui/coneon")
       elseif WtrmrkMath == 5 then
-         wtrmrk:SetImage("teb/cgm13d/conered")
+         wtrmrk:SetImage("theendboss101/cgm13bgui/conered")
       elseif WtrmrkMath == 6 then
-         wtrmrk:SetImage("teb/cgm13d/mingebag")
+         wtrmrk:SetImage("theendboss101/cgm13bgui/mingebag")
          wtrmrk.DoClick = function()
-	         surface.PlaySound("teb/cgm13d/lemon_rant.wav")
+	         surface.PlaySound("tetheendboss101b/cgm13bgui/lemon_rant.wav")
          end
       elseif WtrmrkMath == 7 then
-         wtrmrk:SetImage("teb/cgm13d/semper")
+         wtrmrk:SetImage("theendboss101/cgm13bgui/semper")
       else
-         wtrmrk:SetImage("teb/cgm13d/semper_hat")
+         wtrmrk:SetImage("theendboss101/cgm13bgui/semper_hat")
    end
 
-   GM13Panel:FillMainTab(MainTab)
-   GM13Panel:FillMapTab(MapTab)
-   GM13Panel:FillMemoriesTab(MemoriesTab)
-   GM13Panel:FillDebugTab(DebugTab)
-   GM13Panel:FillarcTab(arcTab)
+   --[[C_GM13B_GUI_Panel:FillMainTab(MainTab)
+   C_GM13B_GUI_Panel:FillMapTab(MapTab)
+   C_GM13B_GUI_Panel:FillMemoriesTab(MemoriesTab)
+   C_GM13B_GUI_Panel:FillDebugTab(DebugTab)
+   C_GM13B_GUI_Panel:FillarcTab(arcTab)]]
 
    PropertySheet:AddSheet( "Main", MainTab, "icon16/user.png", false, false, "The main Property Sheet")
    PropertySheet:AddSheet( "MiniMap", MapTab, "icon16/pictures.png", false, false, "Mini Map")
@@ -91,4 +91,4 @@ function GM13Panel:CreateWindow()
 end
 
 -- bind "n" "cgm13d_vgui"
-concommand.Add("cgm13d_vgui", GM13Panel.CreateWindow)
+concommand.Add("cgm13d_vgui", C_GM13B_GUI_Panel.CreateWindow)

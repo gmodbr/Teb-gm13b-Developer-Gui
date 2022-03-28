@@ -2,7 +2,10 @@
 
 A simple derma gui for gm13 beta.
 
-# How to set up the addon
+> A link you can coppy/paste it:  
+> [Here](https://github.com/TheEndBoss-101/TheEndBoss_101-GM13B-Derma-GUI)
+
+## How to set up the addon
 
 The only thing you need to do is clone the repository inside GMod addons folder and keep the directory names. Like so.
 
@@ -11,32 +14,7 @@ The only thing you need to do is clone the repository inside GMod addons folder 
     <figcaption>The Addons Folder</figcaption>
 </figure>
 
-<!--
-# Images
-
-<figure>
-    <img src="./img/main.png" alt="Main Tab" width="250" height="200">
-    <figcaption>The Main Tab</figcaption>
-</figure>
-<figure>
-    <img src="./img/mem.png" alt="Memories Tab" width="250" height="200">
-    <figcaption>The Memories Tab</figcaption>
-</figure>
-<figure>
-    <img src="./img/maptop.png" alt="Map Tab Top" width="250" height="200">
-    <figcaption>The Map Tab Top</figcaption>
-</figure>
-<figure>
-    <img src="./img/mapbtm.png" alt="Map Tab Bottom" width="250" height="200">
-    <figcaption>The Map Tab Bottom</figcaption>
-</figure>
-<figure>
-    <img src="./img/addons.png" alt="Addons Folder" width="570" height="100">
-    <figcaption>The Addons Folder</figcaption>
-</figure>
--->
-
-# Q & A / FAQ
+## Q & A / FAQ
 
 > Q: How do i download?  
 > A: Click code and download as a .zip
@@ -54,9 +32,9 @@ The only thing you need to do is clone the repository inside GMod addons folder 
 > A: Did you installed it in the correct location?  
 > A: Did you installed it while gmod is running, If so restart gmod.
 
-# Links
+## Links
 
-> ## Addons
+> ### Addons
 >
 > [gm_construct_13 beta](https://steamcommunity.com/sharedfiles/filedetails/?id=2553727051)
 >
@@ -64,25 +42,25 @@ The only thing you need to do is clone the repository inside GMod addons folder 
 >
 > [Mingebags (incredibly smart)](https://steamcommunity.com/sharedfiles/filedetails/?id=2762511940)
 >
-> ### Dupes
+> #### Dupes
 >
 > [Mingebag Seal Ritual](https://steamcommunity.com/sharedfiles/filedetails/?id=2766366126)
 >
 > [GM_13_Beta Curse Detector](https://steamcommunity.com/sharedfiles/filedetails/?id=2774605058) <!-- I made this. -->
 
-> ## Youtube
+> ### Youtube
 >
 > [GMod - Hunting Mingebags in 2022 (Real)](https://www.youtube.com/watch?v=T4xQKoOnjcE)
 
-> ## Extention Packs
+> ### Extention Packs
 >
 > [Anomaly Research Center (A.R.C.)](https://github.com/Xalalau/Anomaly-Research-Center-ARC)
 
-> ## Wikis
+> ### Wikis
 >
 > [A.M.T.F. map Wiki](https://gmconstruct-13-beta.fandom.com/wiki/Gm_construct_13_beta_Wiki)
 
-> ## Discord Servers
+> ### Discord Servers
 >
 > [A.R.C. Discord](https://discord.gg/97UpY3D7XB)
 >
@@ -93,6 +71,6 @@ The only thing you need to do is clone the repository inside GMod addons folder 
 > [GMBR Discord](https://discord.gg/ytkXGNU), GMBR is in, Portuguese mainly.
 > -->
 
-# License
+## License
 
 [MIT License](/LICENSE.md)
