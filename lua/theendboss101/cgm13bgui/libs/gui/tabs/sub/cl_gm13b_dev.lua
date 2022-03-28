@@ -1,3 +1,5 @@
+gm13_events_render_on = 0
+gm13_events_show_names_on = 1
 function C_GM13B_GUI_Panel:Fill_GM13B_SubTab_Dev(GM13B_SubTab_Dev)
   -- Setup
   local GM13B_SubTab_Dev_List = vgui.Create("DScrollPanel", GM13B_SubTab_Dev)
@@ -48,20 +50,18 @@ function C_GM13B_GUI_Panel:Fill_GM13B_SubTab_Dev(GM13B_SubTab_Dev)
    gm13_events_render:SizeToContents()
    gm13_events_render:Dock(TOP)
    gm13_events_render:DockMargin(0, 0, 0, 5)
-   if ConVarExists("gm13_events_render") then
-      if GetConVar("gm13_events_render"):GetString() == "all" then
-         gm13_events_render:SetValue(true)
-      elseif GetConVar("gm13_events_render"):GetString() == "none" then
-         gm13_events_render:SetValue(false)
-      else
-         gm13_events_render:SetValue(false)
-      end
+   if gm13_events_render_on == 1 then
+      gm13_events_render:SetValue(true)
+   else
+      gm13_events_render:SetValue(false)
    end
    function gm13_events_render:OnChange(val)
       if val == true then
          RunConsoleCommand("gm13_events_render", "all")
+         gm13_events_render_on = 1
       else
          RunConsoleCommand("gm13_events_render", "none")
+         gm13_events_render_on = 0
       end
    end
    GM13B_SubTab_Dev_List:AddItem(gm13_events_render)
@@ -72,20 +72,18 @@ function C_GM13B_GUI_Panel:Fill_GM13B_SubTab_Dev(GM13B_SubTab_Dev)
    gm13_events_show_names:SizeToContents()
    gm13_events_show_names:Dock(TOP)
    gm13_events_show_names:DockMargin(0, 0, 0, 5)
-   if ConVarExists("gm13_events_show_names") then
-      if GetConVar("gm13_events_show_names"):GetInt() == 1 then
-         gm13_events_show_names:SetValue(true)
-      elseif GetConVar("gm13_events_show_names"):GetInt() == 0 then
-         gm13_events_show_names:SetValue(false)
-      else
-         gm13_events_show_names:SetValue(false)
-      end
+   if gm13_events_show_names_on == 1 then
+      gm13_events_show_names:SetValue(true)
+   else
+      gm13_events_show_names:SetValue(false)
    end
    function gm13_events_show_names:OnChange(val)
       if val == true then
          RunConsoleCommand("gm13_events_show_names", "1")
+         gm13_events_show_names_on = 1
       else
          RunConsoleCommand("gm13_events_show_names", "0")
+         gm13_events_show_names_on = 9
       end
    end
    GM13B_SubTab_Dev_List:AddItem(gm13_events_show_names)
