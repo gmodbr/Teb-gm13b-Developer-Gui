@@ -73,11 +73,8 @@ The only thing you need to do is clone the repository inside GMod addons folder 
 > [A.R.C. Discord](https://discord.gg/97UpY3D7XB)
 >
 > [A.M.T.F. Discord](https://discord.gg/dw3rVqMhr7)
-
-<!-->
-
+>
 > [GMBR Discord](https://discord.gg/ytkXGNU), GMBR is in, Portuguese mainly.
-> -->
 
 ## License
 
