@@ -1,5 +1,6 @@
 gm13_events_render_on = 0
-gm13_events_show_names_on = 1
+gm13_events_show_names_on = 0
+
 function C_GM13B_GUI_Panel:Fill_GM13B_SubTab_Dev(GM13B_SubTab_Dev)
   -- Setup
   local GM13B_SubTab_Dev_List = vgui.Create("DScrollPanel", GM13B_SubTab_Dev)
