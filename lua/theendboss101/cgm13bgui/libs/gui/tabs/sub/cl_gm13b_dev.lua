@@ -72,10 +72,10 @@ function C_GM13B_GUI_Panel:Fill_GM13B_SubTab_Dev(GM13B_SubTab_Dev)
    gm13_events_show_names:SizeToContents()
    gm13_events_show_names:Dock(TOP)
    gm13_events_show_names:DockMargin(0, 0, 0, 5)
-   if ConVarExists("gm13_events_render") then
-      if GetConVar("gm13_events_render"):GetInt() == 1 then
+   if ConVarExists("gm13_events_show_names") then
+      if GetConVar("gm13_events_show_names"):GetInt() == 1 then
          gm13_events_show_names:SetValue(true)
-      elseif GetConVar("gm13_events_render"):GetInt() == 0 then
+      elseif GetConVar("gm13_events_show_names"):GetInt() == 0 then
          gm13_events_show_names:SetValue(false)
       else
          gm13_events_show_names:SetValue(false)
