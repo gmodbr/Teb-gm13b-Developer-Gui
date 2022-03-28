@@ -17,3 +17,4 @@ Mod ex.
 ## License
 
 [MIT License](/LICENSE.md)
+[Addon Namespace](/NAMESPACE.md)  

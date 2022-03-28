@@ -78,4 +78,5 @@ The only thing you need to do is clone the repository inside GMod addons folder 
 
 ## License
 
-[MIT License](/LICENSE.md)
+[MIT License](/LICENSE.md)  
+[Addon Namespace](/NAMESPACE.md)  
