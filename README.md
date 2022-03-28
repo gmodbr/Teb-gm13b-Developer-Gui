@@ -1,5 +1,7 @@
 # TheEndBoss_101's GM13B Derma GUI
 
+## NOTE: THIS HAS BEEN REDUNE EXPECT BUGS FOR SOME TIME!
+
 A simple derma gui for gm13 beta.
 
 > A link you can coppy/paste it:  
@@ -9,10 +11,7 @@ A simple derma gui for gm13 beta.
 
 The only thing you need to do is clone the repository inside GMod addons folder and keep the directory names. Like so.
 
-<figure>
-    <img src="./img/addons.png" alt="Addons Folder" width="570" height="100">
-    <figcaption>The Addons Folder</figcaption>
-</figure>
+![Mingebags (incredibly smart)](/img/addons.png)
 
 ## Q & A / FAQ
 
