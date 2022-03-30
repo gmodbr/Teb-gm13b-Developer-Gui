@@ -1,6 +1,7 @@
 # TheEndBoss_101's GM13B Derma GUI
 
 ## NOTE: THIS HAS BEEN REDUNE EXPECT BUGS FOR SOME TIME
+### development on pause untill next gm13 update (it is being reworked)
 
 A simple derma gui for gm13 beta.
 
