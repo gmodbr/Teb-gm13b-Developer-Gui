@@ -3,6 +3,7 @@
 >By: TheEndBoss_101 (TEB)  
 >For: gm_construct_13 beta  
 >Last Edited: 4/1/2022  
+>Ver: 3.5
 
 ## NOTE: THIS HAS BEEN REDUNE EXPECT BUGS FOR SOME TIME
 ### development on pause untill next gm13 update (it is being reworked)

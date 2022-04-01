@@ -38,17 +38,17 @@ function C_GM13B_GUI_Panel:Fill_ARC_SubTab_Main(ARC_SubTab_Main)
   end
   ARC_SubTab_Main_List:AddItem(ConeTierSlider)
 
-  -- Take_Damage
-   local Take_Damage_Button = vgui.Create("DButton")
-   Take_Damage_Button:SetText("Set Health to 1")
-   Take_Damage_Button:SetMouseInputEnabled(true)
-   Take_Damage_Button.DoClick = function ()
-      net.Start("gm13_plr_take_damage")
-      net.WriteString(tostring(99))
+  -- Set Health
+   local Set_Health_Button = vgui.Create("DButton")
+   Set_Health_Button:SetText("Set Health to 1")
+   Set_Health_Button:SetMouseInputEnabled(true)
+   Set_Health_Button.DoClick = function ()
+      net.Start("gm13_plr_sethlth")
+      net.WriteString(tostring(1))
       net.SendToServer()
    end
-   Take_Damage_Button:Dock(TOP)
-   Take_Damage_Button:DockMargin(0, 0, 0, 5)
-   Take_Damage_Button:SizeToContents()
-   ARC_SubTab_Main_List:AddItem(Take_Damage_Button)
+   Set_Health_Button:Dock(TOP)
+   Set_Health_Button:DockMargin(0, 0, 0, 5)
+   Set_Health_Button:SizeToContents()
+   ARC_SubTab_Main_List:AddItem(Set_Health_Button)
  end

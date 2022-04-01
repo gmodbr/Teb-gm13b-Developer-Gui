@@ -1,14 +1,14 @@
 util.AddNetworkString("gm13_toggle_devmode")
 util.AddNetworkString("gm13_event_memory_set")
-util.AddNetworkString("gm13_plr_take_damage")
+util.AddNetworkString("gm13_plr_sethlth")
 util.AddNetworkString("gm13_start_mingebag_event")
 
 -- This could be done WAY Better, Nvm did it way better.
 
-net.Receive("gm13_plr_take_damage", function()
-   local Damage = net.ReadString()
+net.Receive("gm13_plr_sethlth", function()
+   local Health = net.ReadString()
 
-   Entity(1):TakeDamage(Damage)
+   Entity(1):SetHealth(Health)
    print("Receved.")
 end)
 
