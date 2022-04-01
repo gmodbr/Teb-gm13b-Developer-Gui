@@ -5,6 +5,7 @@
 >Last Edited: 4/1/2022  
 
 ## NOTE: THIS HAS BEEN REDUNE EXPECT BUGS FOR SOME TIME
+### development on pause untill next gm13 update (it is being reworked)
 
 A simple derma gui for gm13 beta.
 
