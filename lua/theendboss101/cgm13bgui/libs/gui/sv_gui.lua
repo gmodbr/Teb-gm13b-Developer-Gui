@@ -1,6 +1,7 @@
 util.AddNetworkString("gm13_toggle_devmode")
 util.AddNetworkString("gm13_event_memory_set")
 util.AddNetworkString("gm13_plr_take_damage")
+util.AddNetworkString("gm13_start_mingebag_event")
 
 -- This could be done WAY Better, Nvm did it way better.
 
@@ -11,7 +12,25 @@ net.Receive("gm13_plr_take_damage", function()
    print("Receved.")
 end)
 
-net.Receive("gm13_event_memory_set", function()
+net.Receive("gm13_start_mingebag_event", function(_, ply)
+   if not ply:IsAdmin() and not ply:IsSuperAdmin() then return end
+
+   local isLocalMinge = net.ReadString()
+   local delay = net.ReadString()
+   local repetitions = net.ReadString()
+
+   if isLocalMinge then
+      GM13.Lobby:Join(delay, repetitions, nil, true)
+   else
+      GM13.Lobby:Exit()
+      --CreateEvent()
+      GM13.Lobby:SelectBestServer()
+   end
+   print("Receved.")
+end)
+
+net.Receive("gm13_event_memory_set", function(_, ply)
+   if not ply:IsAdmin() and not ply:IsSuperAdmin() then return end
    local RecMemory1 = net.ReadString()
    local RecMemory1a = net.ReadString()
    local RecMemory2 = net.ReadString()

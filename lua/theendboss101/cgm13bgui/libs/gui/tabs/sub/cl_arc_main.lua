@@ -5,7 +5,6 @@ function C_GM13B_GUI_Panel:Fill_ARC_SubTab_Main(ARC_SubTab_Main)
 
   -- Desc
   local ARC_SubTab_Main_Label = vgui.Create("DLabel")
-  ARC_SubTab_Main_Label:SetPos(5,5)
   ARC_SubTab_Main_Label:SetText(" The A.R.C. Main tab")
   ARC_SubTab_Main_Label:SizeToContents()
   ARC_SubTab_Main_Label:Dock(TOP)

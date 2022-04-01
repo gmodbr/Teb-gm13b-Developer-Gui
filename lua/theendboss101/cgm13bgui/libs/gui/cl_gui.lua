@@ -62,14 +62,18 @@ function C_GM13B_GUI_Panel:CreateWindow()
    PropertySheet:SetParent(DermaFrame)
    PropertySheet:Dock(FILL)
 
+   local About_Tab = vgui.Create("DPanel")
+   About_Tab:SetBackgroundColor(Color(51, 51, 51))
    local GM13B_Tab = vgui.Create("DPanel")
    GM13B_Tab:SetBackgroundColor(Color(51, 51, 51))
    local ARC_Tab = vgui.Create("DPanel")
    ARC_Tab:SetBackgroundColor(Color(51, 51, 51))
 
+   C_GM13B_GUI_Panel:Fill_About_Tab(About_Tab)
    C_GM13B_GUI_Panel:Fill_GM13B_Tab(GM13B_Tab)
    C_GM13B_GUI_Panel:Fill_ARC_Tab(ARC_Tab)
 
+   PropertySheet:AddSheet("About", About_Tab, "icon16/information.png", false, false, "Information")
    PropertySheet:AddSheet("gm13b", GM13B_Tab, "icon16/application.png", false, false, "gm_construct 13 beta")
    PropertySheet:AddSheet("A.R.C.", ARC_Tab, "icon16/application_add.png", false, false, "Anomaly Research Center")
 end

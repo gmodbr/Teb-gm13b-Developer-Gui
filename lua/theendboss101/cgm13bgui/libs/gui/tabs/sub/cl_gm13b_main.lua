@@ -5,7 +5,7 @@ function C_GM13B_GUI_Panel:Fill_GM13B_SubTab_Main(GM13B_SubTab_Main)
 
   -- Desc
   local GM13B_SubTab_Main_Label = vgui.Create("DLabel")
-  GM13B_SubTab_Main_Label:SetPos(5,5)
+
   GM13B_SubTab_Main_Label:SetText(" The GM13B Main tab")
   GM13B_SubTab_Main_Label:SizeToContents()
   GM13B_SubTab_Main_Label:Dock(TOP)
