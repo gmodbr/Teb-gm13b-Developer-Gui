@@ -1,4 +1,4 @@
-TOOL.Category = "gmc13b"
+TOOL.Category = "C_GM13B_GUI"
 TOOL.Name = "#Tool.spawn_curse_detector_upgrade.name"
 TOOL.Command = nil
 TOOL.ConfigName = ""
@@ -12,7 +12,7 @@ if CLIENT then
 	language.Add("Tool.spawn_curse_detector_upgrade.left", "Spawn Curse Detector Upgrade")
 end
 
-local function spawn_curse_detector_upgrade(pos)
+local function spawn_curse_detector_upgrade(pos) -- please make this a ent.
 	if SERVER then
 		local pos2 = Vector(math.Round(pos.x, 2), math.Round(pos.y, 2), math.Round(pos.z, 2))
 		local spawn_curse_detector_upgrade = ents.Create("prop_physics")

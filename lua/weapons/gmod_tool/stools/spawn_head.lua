@@ -1,4 +1,4 @@
-TOOL.Category = "gmc13b"
+TOOL.Category = "C_GM13B_GUI"
 TOOL.Name = "#Tool.spawn_head.name"
 TOOL.Command = nil
 TOOL.ConfigName = ""

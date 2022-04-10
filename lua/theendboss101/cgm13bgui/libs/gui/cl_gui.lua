@@ -71,11 +71,13 @@ function C_GM13B_GUI_Panel:CreateWindow()
 
    C_GM13B_GUI_Panel:Fill_About_Tab(About_Tab)
    C_GM13B_GUI_Panel:Fill_GM13B_Tab(GM13B_Tab)
-   C_GM13B_GUI_Panel:Fill_ARC_Tab(ARC_Tab)
+	C_GM13B_GUI_Panel:Fill_ARC_Tab(ARC_Tab)
 
    PropertySheet:AddSheet("About", About_Tab, "icon16/information.png", false, false, "Information")
    PropertySheet:AddSheet("gm13b", GM13B_Tab, "icon16/application.png", false, false, "gm_construct 13 beta")
-   PropertySheet:AddSheet("A.R.C.", ARC_Tab, "icon16/application_add.png", false, false, "Anomaly Research Center")
+--   if file.Exists("addons/Anomaly-Research-Center-ARC", "GAME" ) then
+      PropertySheet:AddSheet("A.R.C.", ARC_Tab, "icon16/application_add.png", false, false, "Anomaly Research Center")
+--   end
 end
 
 -- bind "n" "cgm13d_vgui"

@@ -1,8 +1,4 @@
---if file.Exists("addons/Anomaly-Research-Center-ARC", "GAME" ) then
---	return end
---end
-
-TOOL.Category = "gmc13b"
+TOOL.Category = "C_GM13B_GUI"
 TOOL.Name = "#Tool.spawn_companion_doll.name"
 TOOL.Command = nil
 TOOL.ConfigName = ""
