@@ -22,41 +22,6 @@ function C_GM13B_GUI_Panel:CreateWindow()
    DermaFrame:MakePopup()
    DermaFrame:Center()
 
-   -- shuld remove.
-   --[[] Water mark
-   local wtrmrk = vgui.Create("DImageButton", DermaFrame) --mobenixcitizen2007 sugested this.
-   wtrmrk:SetSize(60, 85)
-   wtrmrk:SetPos(570, 440)
-   --wtrmrk:SetPos(60, 85)
-   local WtrmrkMath = math.random(1, 7) -- Has to be a better way
-   if WtrmrkMath == 1 then
-         wtrmrk:SetImage("theendboss101/cgm13bgui/arc")
-         wtrmrk:SetSize(65, 85)
-         wtrmrk.DoClick = function()
-	         surface.PlaySound("theendboss101/cgm13bgui/StillAlive.wav")
-         end
-      elseif WtrmrkMath == 2 then
-         wtrmrk:SetImage("theendboss101/cgm13bgui/blackfigure")
-         wtrmrk.DoClick = function()
-	         surface.PlaySound("theendboss101/cgm13bgui/dialup.wav")
-         end
-      elseif WtrmrkMath == 3 then
-         wtrmrk:SetImage("theendboss101/cgm13bgui/coneoff")
-      elseif WtrmrkMath == 4 then
-         wtrmrk:SetImage("theendboss101/cgm13bgui/coneon")
-      elseif WtrmrkMath == 5 then
-         wtrmrk:SetImage("theendboss101/cgm13bgui/conered")
-      elseif WtrmrkMath == 6 then
-         wtrmrk:SetImage("theendboss101/cgm13bgui/mingebag")
-         wtrmrk.DoClick = function()
-	         surface.PlaySound("tetheendboss101b/cgm13bgui/lemon_rant.wav")
-         end
-      elseif WtrmrkMath == 7 then
-         wtrmrk:SetImage("theendboss101/cgm13bgui/semper")
-      else
-         wtrmrk:SetImage("theendboss101/cgm13bgui/semper_hat")
-   end--]]
-
     -- Tabs
    local PropertySheet = vgui.Create("DPropertySheet")
    PropertySheet:SetParent(DermaFrame)
