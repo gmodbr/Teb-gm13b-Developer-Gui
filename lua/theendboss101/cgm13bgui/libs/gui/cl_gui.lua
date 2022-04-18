@@ -45,5 +45,5 @@ function C_GM13B_GUI_Panel:CreateWindow()
 --   end
 end
 
--- bind "n" "cgm13d_vgui"
+-- bind "n" "echo "C_GM13B_GUI_Panel.CreateWindow";cgm13d_vgui"
 concommand.Add("cgm13d_vgui", C_GM13B_GUI_Panel.CreateWindow)

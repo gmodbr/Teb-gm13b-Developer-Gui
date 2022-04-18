@@ -11,13 +11,12 @@ C_GM13B_GUI = { -- Community GM13 Developer
 	name = "C_GM13B_GUI",
 	Gui = {},
 	--DevMode = false,
-	toolCategories = { 
-		"C_GM13B_GUI"
-	},
+	toolCategories = {"C_GM13B_GUI_DEV"} -- Devmove tool categories
 }
 
 --hook.Add("Initialize", CGM13.name .. "_int", function()
 hook.Add("Initialize", C_GM13B_GUI.name .. "_int", function()
 	--GM13:AddBase("theendboss101/cgm13bgui") -- Legacy
 	GM13:IncludeBase("theendboss101/cgm13bgui")
+	--GM13:IncludeBase(C_GM13B_GUI)
 end)

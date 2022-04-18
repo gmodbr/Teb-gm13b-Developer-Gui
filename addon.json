@@ -1,0 +1,16 @@
+{
+	"title"		:	"TheEndBoss_101's gm_comstruct 13 beta GUI",
+	"type"		:	"ServerContent",
+	"tags"		:	[ "roleplay", "realism" ],
+	"ignore"	:
+	[
+		"*.psd",
+        "*.tga",
+        "*.pdn",
+        "*.bat",
+		"*.vcproj",
+		"*.svn*",
+        "*.git*",
+        "*.md"
+	]
+}

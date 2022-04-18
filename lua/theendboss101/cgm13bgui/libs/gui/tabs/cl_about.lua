@@ -9,62 +9,63 @@ function C_GM13B_GUI_Panel:Fill_About_Tab(About_Tab)
       ["Name"] = "ARC",
       ["Size"] = "65, 85",
       ["Image"] = "theendboss101/cgm13bgui/arc",
-      ["Sound"] = "theendboss101/cgm13bgui/arc",
+      ["Sound"] = "theendboss101/cgm13bgui/arc"
     },
       ["2"] = {
       ["Name"] = "blackfigure",
       ["Size"] = "",
       ["Image"] = "theendboss101/cgm13bgui/blackfigure",
-      ["Sound"] = "theendboss101/cgm13bgui/dialup.wav",
+      ["Sound"] = "theendboss101/cgm13bgui/dialup.wav"
     },
       ["3"] = {
       ["Name"] = "coneoff",
       ["Size"] = "",
       ["Image"] = "theendboss101/cgm13bgui/coneoff",
-      ["Sound"] = "",
+      ["Sound"] = ""
     },
       ["4"] = {
       ["Name"] = "coneon",
       ["Size"] = "",
       ["Image"] = "theendboss101/cgm13bgui/coneon",
-      ["Sound"] = "",
+      ["Sound"] = ""
     },
       ["5"] = {
       ["Name"] = "conered",
       ["Size"] = "",
       ["Image"] = "theendboss101/cgm13bgui/conered",
-      ["Sound"] = "",
+      ["Sound"] = ""
     },
       ["6"] = {
       ["Name"] = "mingebag",
       ["Size"] = "",
       ["Image"] = "theendboss101/cgm13bgui/mingebag",
-      ["Sound"] = "tetheendboss101b/cgm13bgui/lemon_rant.wav",
+      ["Sound"] = "tetheendboss101b/cgm13bgui/lemon_rant.wav"
     },
       ["7"] = {
       ["Name"] = "semper",
       ["Size"] = "",
       ["Image"] = "theendboss101/cgm13bgui/semper",
-      ["Sound"] = "",
+      ["Sound"] = ""
     },
       ["8"] = {
       ["Name"] = "semper_hat",
       ["Size"] = "",
       ["Image"] = "theendboss101/cgm13bgui/semper_hat",
-      ["Sound"] = "",
-    },
+      ["Sound"] = ""
+    }
   }
 
   local wtrmrk = vgui.Create("DImageButton", DermaFrame) --mobenixcitizen2007 sugested this.
   wtrmrk:SetSize(60, 85)
   wtrmrk:SetPos(570, 440)
   --wtrmrk:SetPos(60, 85)
-  local wtrmrkMth = math.random(1, 8)
+  local wtrmrkMth = tostring(math.random(1, 8))
   local wtrmrkSel = WtrmrkTB[wtrmrkMth]
   wtrmrk:SetImage(wtrmrkSel["Image"])
   wtrmrk:SetSize(wtrmrkSel["Size"])
   wtrmrk.DoClick = function()
 	  surface.PlaySound(wtrmrkSel["Sound"])
+    wtrmrk:Remove()
   end
 
   local About_SubTab_Main = vgui.Create("DPanel")
