@@ -8,6 +8,7 @@
 
 C_GM13B_GUI = { -- Community GM13 Developer GUI
 	luaFolder = "theendboss101/cgm13bgui",
+	dataFolder = "cgm13bgui",
 	toolCategories = { -- Devmove tool categories
 		"C_GM13B_GUI",
 		"C_GM13B_GUI_DEV"
